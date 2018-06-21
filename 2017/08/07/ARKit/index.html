@@ -3,15 +3,22 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Do it</title>
+    <title>ARKit初识 | Do it</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Do it">
-<meta property="og:url" content="http://www.lianzai.me/index.html">
+    <meta name="description" content="什么是ARKit?ARKit是苹果在2017年WWDC推出的AR开发平台。开发人员可以使用这套工具iPhone和iPad创建增强现实应用程序。刚好自己的手机支持于是乎看着文档来玩一玩吧.">
+<meta name="keywords" content="iOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ARKit初识">
+<meta property="og:url" content="http://www.lianzai.me/2017/08/07/ARKit/index.html">
 <meta property="og:site_name" content="Do it">
+<meta property="og:description" content="什么是ARKit?ARKit是苹果在2017年WWDC推出的AR开发平台。开发人员可以使用这套工具iPhone和iPad创建增强现实应用程序。刚好自己的手机支持于是乎看着文档来玩一玩吧.">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://wap.yesky.com/uploadImages/2017/301/52/P062L8979U7H_3.jpg">
+<meta property="og:updated_time" content="2018-06-21T11:29:39.126Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Do it">
+<meta name="twitter:title" content="ARKit初识">
+<meta name="twitter:description" content="什么是ARKit?ARKit是苹果在2017年WWDC推出的AR开发平台。开发人员可以使用这套工具iPhone和iPad创建增强现实应用程序。刚好自己的手机支持于是乎看着文档来玩一玩吧.">
+<meta name="twitter:image" content="http://wap.yesky.com/uploadImages/2017/301/52/P062L8979U7H_3.jpg">
     
 
     
@@ -208,141 +215,12 @@
 </aside>
 
             
-            <section id="main">
-    <article id="post-git提速" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2017/11/21/git提速/">git提速</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fas fa-calendar-alt"></i>
-        <a href="/2017/11/21/git提速/">
-            <time datetime="2017-11-21T11:31:57.000Z" itemprop="datePublished">2017-11-21</time>
-        </a>
-    </div>
-
-
-                        
-                        
-    <div class="article-tag">
-        <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/tags/工具/">工具</a>, <a class="tag-link" href="/tags/日常/">日常</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><p>笔者今天打开Mac更新一个项目的三方库,奈何速度实在太慢.现把方法总结一下,<br>第一种方法速度最快,可达M级别.<br></p>
-            <p class="article-more-link">
-                <a href="/2017/11/21/git提速/#more">Read More</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://www.lianzai.me/2017/11/21/git提速/" data-id="cjioi0k6j0001zytlb0mmxz4r" class="article-share-link"><i class="fas fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-ARKit-之利用Unity模型虚拟女朋友" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-ARKit" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             
 	
-		<a href="/2017/10/21/ARKit-之利用Unity模型虚拟女朋友/" itemprop="url">
-            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1529591619440&di=6c56424c6f85d0e5c68e5ccf9e4af2bb&imgtype=0&src=http%3A%2F%2Fimg1.cache.netease.com%2Fcatchpic%2F1%2F1A%2F1A59E07886ECDAE07390974B0C55908C.jpg" class="article-banner" />
-        </a>
+		<img src="http://wap.yesky.com/uploadImages/2017/301/52/P062L8979U7H_3.jpg" class="article-banner" />
 	
 
 
@@ -352,144 +230,8 @@
             <header class="article-header">
                 
     
-        <h1 itemprop="name">
-            <a class="article-title" href="/2017/10/21/ARKit-之利用Unity模型虚拟女朋友/">ARKit 之利用Unity模型虚拟女朋友</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fas fa-calendar-alt"></i>
-        <a href="/2017/10/21/ARKit-之利用Unity模型虚拟女朋友/">
-            <time datetime="2017-10-21T11:35:23.000Z" itemprop="datePublished">2017-10-21</time>
-        </a>
-    </div>
-
-
-                        
-                        
-    <div class="article-tag">
-        <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/tags/iOS/">iOS</a>, <a class="tag-link" href="/tags/unity/">unity</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><p>用unity随便玩了一下.<br></p>
-            <p class="article-more-link">
-                <a href="/2017/10/21/ARKit-之利用Unity模型虚拟女朋友/#more">Read More</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://www.lianzai.me/2017/10/21/ARKit-之利用Unity模型虚拟女朋友/" data-id="cjioi0k6e0000zytldeplodve" class="article-share-link"><i class="fas fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-ARKit" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-            
-	
-		<a href="/2017/08/07/ARKit/" itemprop="url">
-            <img src="http://wap.yesky.com/uploadImages/2017/301/52/P062L8979U7H_3.jpg" class="article-banner" />
-        </a>
-	
-
-
-
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2017/08/07/ARKit/">ARKit初识</a>
+        <h1 class="article-title" itemprop="name">
+            ARKit初识
         </h1>
     
 
@@ -518,10 +260,89 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h1 id="什么是ARKit"><a href="#什么是ARKit" class="headerlink" title="什么是ARKit?"></a>什么是ARKit?</h1><p>ARKit是苹果在2017年WWDC推出的AR开发平台。开发人员可以使用这套工具iPhone和iPad创建增强现实应用程序。刚好自己的手机支持于是乎看着文档来玩一玩吧.<br></p>
-            <p class="article-more-link">
-                <a href="/2017/08/07/ARKit/#more">Read More</a>
-            </p>
+            
+            <h1 id="什么是ARKit"><a href="#什么是ARKit" class="headerlink" title="什么是ARKit?"></a>什么是ARKit?</h1><p>ARKit是苹果在2017年WWDC推出的AR开发平台。开发人员可以使用这套工具iPhone和iPad创建增强现实应用程序。刚好自己的手机支持于是乎看着文档来玩一玩吧.<br><a id="more"></a></p>
+<h2 id="1-追踪"><a href="#1-追踪" class="headerlink" title="1.追踪"></a>1.追踪</h2><p><img src="http://upload-images.jianshu.io/upload_images/2420845-c188468e58d5a972.png" alt="arkit_01.png"></p>
+<ul>
+<li><p>world tracking 全局追踪<br>识别现实场景要显示的东西应该放在哪里 .</p>
+</li>
+<li><p>Visual inertial odometry 视觉惯性测距<br>就像平常我们看东西一样.近大远小.</p>
+</li>
+<li><p>No external setup  没有外部设置<br>苹果的意思就是说有一台iPhone就够了,不需要其他外设<br>##2.场景理解<br><img src="http://upload-images.jianshu.io/upload_images/2420845-c48e321d3ccca4ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400" alt="arkit_02.png"></p>
+</li>
+<li><p>Plane detection 平面检测<br>对现实平面是否水平面,斜面,垂直面进行检测</p>
+</li>
+<li><p>Hit-testig 命中测试<br>当确定这个平面的时候,给虚拟物体加上重力计数,它会平放在那里</p>
+</li>
+<li><p>Light estimation 光估量<br>摄像头传感器评估现场的光度,给你的虚拟物品加上阴影之类的<br>##3.渲染<br><img src="http://upload-images.jianshu.io/upload_images/2420845-43bb3b257ae2d3e2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400" alt="QQ20170804-141503.png"></p>
+</li>
+<li>Easy integration 简单集合</li>
+<li>AR views AR视图</li>
+<li>Custom rendering 自定义渲染</li>
+</ul>
+<p>简单来说 ARKit 就是利用相机捕捉现实世界然后在屏幕上显示3D模型.</p>
+<ul>
+<li>相机捕捉现实世界 —-&gt;ARkit来实现</li>
+<li>显示自己的3D模型 —-&gt;SceneKit</li>
+</ul>
+<p>#底层体系</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2420845-6854b308edd5d9b3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400" alt="006.png"></p>
+<ul>
+<li>ScenneKit iOS8后出来用来做游戏用的3D</li>
+<li>SpriteKit iOS7把2D coco 再进行封装</li>
+<li>Metal 操作GPU CPU的API 进行纹理,材质上的改变</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/2420845-5e01fae2d08f9f7b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400" alt="007.png"></p>
+<ul>
+<li>AVFoudation 数据采集捕捉</li>
+<li>CoreMotion  侦测手机移动,3d画面以怎样的角度显示等等<br>#整个步骤</li>
+<li>First step <ul>
+<li>ARSession //这是个单例,是ARKit的核心类,用于控制设备摄像头<br>处理传感器数据,对捕捉的图像进行分析等等</li>
+</ul>
+</li>
+<li><p>Configurations</p>
+<ul>
+<li><p>ARSessionConfiguration //跟踪设备方向的一个基本配置,在运行时候需要指定AR运行的配置</p>
+</li>
+<li><p>class ARWorldTrackingSessionConfiguration //配置跟踪设备的方向和位置,以及检测设备摄像头所看到的现实世界的表面</p>
+</li>
+</ul>
+</li>
+<li><p>Standard Views</p>
+<ul>
+<li><p>ARSCNView //用来增加相机通过3D Scenekit所捕捉到的内容并展示AR效果的一个View</p>
+</li>
+<li><p>ARSKView //用来增强相机通过2D SpriteKit所捕捉到的内容并展示AR效果的一个View</p>
+</li>
+</ul>
+</li>
+<li><p>Real-World Objects and Positions</p>
+<ul>
+<li><p>ARAnchor //真实世界的位置和方向,用于在一个AR场景中放置物体</p>
+</li>
+<li><p>APPlaneAnchor //在一个AR Session会话中检测一个真实世界的位置和方向的相关信息</p>
+</li>
+<li><p>ARHitTestResult //在一个AR Session会话中通过检测相机视图中的一个点来获取真是世界中表面的相关信息</p>
+</li>
+</ul>
+</li>
+<li><p>Camera and Scene Details</p>
+<ul>
+<li><p>ARFrame //捕获一个视频图像和位置追踪信息作为一个AR会话的一部分</p>
+</li>
+<li><p>ARCamera //在一个AR会话中摄像机的位置和成像特征信息为捕获视频帧</p>
+</li>
+<li><p>ARLightEstimate //在一个AR会话中估计场景照明信息关联到一个捕获的视频帧</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>#Demo练习one<br>添加一个白色的球体到屏幕中<br>  <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">//初始化配置</span></span><br><span class="line">override func viewDidLoad() &#123;</span><br><span class="line">    <span class="keyword">super</span>.viewDidLoad()</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//设置追踪</span></span><br><span class="line">    let configuration = ARWorldTrackingSessionConfiguration();</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//检测水平面</span></span><br><span class="line">    configuration.planeDetection = .horizontal;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//开始配置运行</span></span><br><span class="line">    sceneView.session.run(configuration);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Do any additional setup after loading the view, typically from a nib.</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func addCube(_ sender: Any) &#123;</span><br><span class="line">    <span class="comment">//镜头前后的位置</span></span><br><span class="line">    let zCoords = <span class="number">-0.5</span>;</span><br><span class="line"></span><br><span class="line">    print(zCoords);</span><br><span class="line">    <span class="comment">//单位米 0.1米 </span></span><br><span class="line">    let culbeNode = <span class="built_in">SCNNode</span>(geometry:<span class="built_in">SCNBox</span>(width: <span class="number">0.1</span>, height: <span class="number">0.1</span>, length: <span class="number">0.1</span>, chamferRadius: <span class="number">0.1</span>) );</span><br><span class="line">     </span><br><span class="line">    <span class="comment">//出现在3维空间的位置</span></span><br><span class="line">    culbeNode.position = <span class="built_in">SCNVector3</span>(<span class="number">0</span>,<span class="number">0</span>,zCoords);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//添加到根节点</span></span><br><span class="line">    sceneView.scene.rootNode.addChildNode(culbeNode);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2420845-88adea69c02d5b36.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/200" alt="demo1.jpg"></p>
+<p>#Demo2<br>添加3D素材到屏幕上,这里用到的素材取自苹果的Demo,后面会给出的Demo链接和苹果的官方Demo链接<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">//获取相机的坐标</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> myCamraCoordinaties &#123;</span><br><span class="line">     </span><br><span class="line">     var x = Float();</span><br><span class="line">     var y = Float();</span><br><span class="line">     var z = Float();</span><br><span class="line">     </span><br><span class="line"> &#125;</span><br><span class="line">func getCamraCoordinaties(sceneViewm: ARSCNView) -&gt; myCamraCoordinaties &#123;</span><br><span class="line">     </span><br><span class="line">     let cameraTransForm = sceneView.session.currentFrame?.camera.transform;</span><br><span class="line">     let cameraCoodrdiantes = MDLTransform(matrix: cameraTransForm!)</span><br><span class="line">     </span><br><span class="line">     var cc  = myCamraCoordinaties()</span><br><span class="line">     </span><br><span class="line">     cc.x = cameraCoodrdiantes.translation.x</span><br><span class="line">     cc.y = cameraCoodrdiantes.translation.y</span><br><span class="line">     cc.z = cameraCoodrdiantes.translation.z</span><br><span class="line">     </span><br><span class="line">     <span class="keyword">return</span> cc;</span><br><span class="line"></span><br><span class="line"> &#125;</span><br><span class="line">func addCup(_ sender: Any) &#123;</span><br><span class="line">     </span><br><span class="line">     let cupNode = <span class="built_in">SCNNode</span>();</span><br><span class="line">     </span><br><span class="line">     let cc = getCamraCoordinaties(sceneViewm: sceneView);</span><br><span class="line">     cupNode.position = <span class="built_in">SCNVector3</span>(cc.x,cc.y,cc.z);</span><br><span class="line">     </span><br><span class="line">     guard let vitualObjectSecne = <span class="built_in">SCNScene</span>(named:<span class="string">"cup.scn"</span> ,inDirectory:<span class="string">"Models.scnassets/cup"</span>)<span class="keyword">else</span>&#123;</span><br><span class="line">         </span><br><span class="line">         <span class="keyword">return</span></span><br><span class="line">     &#125;</span><br><span class="line">     let wrapperNode = <span class="built_in">SCNNode</span>()</span><br><span class="line">     </span><br><span class="line">     <span class="keyword">for</span> child <span class="keyword">in</span> vitualObjectSecne.rootNode.childNodes &#123;</span><br><span class="line">         </span><br><span class="line">         child.geometry?.firstMaterial?.lightingModel = .physicallyBased</span><br><span class="line">         wrapperNode.addChildNode(child)</span><br><span class="line">     &#125;</span><br><span class="line">     cupNode.addChildNode(wrapperNode);</span><br><span class="line">     </span><br><span class="line">     sceneView.scene.rootNode.addChildNode(cupNode);</span><br><span class="line">     </span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2420845-66996e3d2de719da.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/200" alt="Demo.jpg"></p>
+<p>下载地址<br>[^官方Demo] <a href="https://developer.apple.com/sample-code/wwdc/2017/PlacingObjects.zip" target="_blank" rel="noopener">https://developer.apple.com/sample-code/wwdc/2017/PlacingObjects.zip</a><br>[^文中Demo] <a href="https://github.com/FineaX/arkitDemoPractice" target="_blank" rel="noopener">https://github.com/FineaX/arkitDemoPractice</a></p>
+
         
         </div>
         <footer class="article-footer">
@@ -603,8 +424,28 @@
         </footer>
     </div>
     
+        
+<nav id="article-nav">
+    
+        <a href="/2017/10/21/ARKit-之利用Unity模型虚拟女朋友/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    ARKit 之利用Unity模型虚拟女朋友
+                
+            </div>
+        </a>
+    
+    
+</nav>
+
+
+    
 </article>
 
+
+    
+    
 
 </section>
             
