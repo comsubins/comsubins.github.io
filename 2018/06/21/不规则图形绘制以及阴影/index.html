@@ -15,7 +15,8 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2420845-f03049ced83d5ce8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2420845-2482abc294c34b48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-06-21T16:20:01.726Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2420845-cbf275c53124fb71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-06-28T15:13:41.239Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="贝塞尔不规则图形绘制以及阴影">
 <meta name="twitter:description" content="之前碰到过一个优惠劵的不规则图形,既有圆角又有阴影,虽然用QUARZ2D也能做,但是还是想用下贝塞尔+CAShapeLayer的组合.最终效果如下图:">
@@ -87,7 +88,7 @@
             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Rechercher" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -106,9 +107,9 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Posts',
+            POSTS: 'Articles',
             PAGES: 'Pages',
-            CATEGORIES: 'Categories',
+            CATEGORIES: 'Catégories',
             TAGS: 'Tags',
             UNTITLED: '(Untitled)',
         },
@@ -140,7 +141,7 @@
                 <td>
                     
     <div class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Rechercher" />
     </div>
 
                 </td>
@@ -160,16 +161,16 @@
             <h2 id="name">comsubins</h2>
             <h3 id="title">Apple Developer &amp; Designer</h3>
             <span id="location"><i class="fas fa-map-marker-alt" style="padding-right: 5px"></i>ChangSha, China</span>
-            <a id="follow" target="_blank" href="https://github.com/FineaX">FOLLOW</a>
+            <a id="follow" target="_blank" href="https://github.com/FineaX">SUIVRE</a>
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
                 4
-                <span>posts</span>
+                <span>Articles</span>
             </div>
             <div class="article-info-block">
                 4
-                <span>tags</span>
+                <span>Tags</span>
             </div>
         </div>
         
@@ -268,8 +269,12 @@
 <p><img src="https://upload-images.jianshu.io/upload_images/2420845-2482abc294c34b48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="弧线参考系.png"></p>
 <p>开始画圆:<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"> <span class="built_in">UIBezierPath</span> *path = [<span class="built_in">UIBezierPath</span> bezierPath];</span><br><span class="line"></span><br><span class="line"><span class="comment">//左上圆弧</span></span><br><span class="line">[path addArcWithCenter:<span class="built_in">CGPointMake</span>(<span class="number">4</span>, <span class="number">4</span>)</span><br><span class="line">                radius:<span class="number">4</span></span><br><span class="line">            startAngle:DEGREES_TO_RADIANS(<span class="number">270</span>)</span><br><span class="line">              endAngle:DEGREES_TO_RADIANS(<span class="number">180</span>)</span><br><span class="line">             clockwise:<span class="literal">NO</span>];</span><br><span class="line"></span><br><span class="line">[path addLineToPoint:<span class="built_in">CGPointMake</span>(<span class="number">0</span>, <span class="number">100</span>)];</span><br><span class="line"></span><br><span class="line"><span class="comment">//左半弧</span></span><br><span class="line">[path addArcWithCenter:<span class="built_in">CGPointMake</span>(<span class="number">0</span>, <span class="number">100</span> + <span class="number">10</span>)</span><br><span class="line">                radius:<span class="number">10</span></span><br><span class="line">            startAngle:DEGREES_TO_RADIANS(<span class="number">270</span>)</span><br><span class="line">              endAngle:DEGREES_TO_RADIANS(<span class="number">90</span>)</span><br><span class="line">             clockwise:<span class="literal">YES</span>];</span><br><span class="line"></span><br><span class="line">[path addLineToPoint:<span class="built_in">CGPointMake</span>(<span class="number">0</span>, <span class="keyword">self</span>.bounds.size.height<span class="number">-4</span>)];</span><br><span class="line"></span><br><span class="line"><span class="comment">//左下圆弧</span></span><br><span class="line">[path addArcWithCenter:<span class="built_in">CGPointMake</span>(<span class="number">4</span>, <span class="keyword">self</span>.bounds.size.height<span class="number">-4</span>)</span><br><span class="line">                radius:<span class="number">4</span></span><br><span class="line">            startAngle:DEGREES_TO_RADIANS(<span class="number">180</span>)</span><br><span class="line">              endAngle:DEGREES_TO_RADIANS(<span class="number">90</span>)</span><br><span class="line">             clockwise:<span class="literal">NO</span>];</span><br><span class="line"></span><br><span class="line">[path addLineToPoint:<span class="built_in">CGPointMake</span>(<span class="keyword">self</span>.bounds.size.width<span class="number">-4</span>, <span class="keyword">self</span>.bounds.size.height)];</span><br><span class="line"></span><br><span class="line"><span class="comment">//右下圆弧</span></span><br><span class="line">[path addArcWithCenter:<span class="built_in">CGPointMake</span>(<span class="keyword">self</span>.bounds.size.width<span class="number">-4</span>, <span class="keyword">self</span>.bounds.size.height<span class="number">-4</span>)</span><br><span class="line">                radius:<span class="number">4</span></span><br><span class="line">            startAngle:DEGREES_TO_RADIANS(<span class="number">90</span>)</span><br><span class="line">              endAngle:DEGREES_TO_RADIANS(<span class="number">0</span>)</span><br><span class="line">             clockwise:<span class="literal">NO</span>];</span><br><span class="line"></span><br><span class="line">[path addLineToPoint:<span class="built_in">CGPointMake</span>(<span class="keyword">self</span>.bounds.size.width, <span class="number">100</span>+<span class="number">20</span>)];</span><br><span class="line"></span><br><span class="line"><span class="comment">//右半弧</span></span><br><span class="line">[path addArcWithCenter:<span class="built_in">CGPointMake</span>(<span class="keyword">self</span>.bounds.size.width, <span class="number">100</span>+<span class="number">10</span>)</span><br><span class="line">                radius:<span class="number">10</span></span><br><span class="line">            startAngle:DEGREES_TO_RADIANS(<span class="number">90</span>)</span><br><span class="line">              endAngle:DEGREES_TO_RADIANS(<span class="number">270</span>)</span><br><span class="line">             clockwise:<span class="literal">YES</span>];</span><br><span class="line"></span><br><span class="line">[path addLineToPoint:<span class="built_in">CGPointMake</span>(<span class="keyword">self</span>.bounds.size.width, <span class="number">4</span>)];</span><br><span class="line"></span><br><span class="line"><span class="comment">//右上</span></span><br><span class="line">[path addArcWithCenter:<span class="built_in">CGPointMake</span>(<span class="keyword">self</span>.bounds.size.width<span class="number">-4</span>, <span class="number">4</span>)</span><br><span class="line">                radius:<span class="number">4</span></span><br><span class="line">            startAngle:DEGREES_TO_RADIANS(<span class="number">0</span>)</span><br><span class="line">              endAngle:DEGREES_TO_RADIANS(<span class="number">270</span>)</span><br><span class="line">             clockwise:<span class="literal">NO</span>];</span><br><span class="line"></span><br><span class="line">[path closePath];</span><br></pre></td></tr></table></figure></p>
 <p>CAShapeLayer属于QuartzCore框架，继承自CALayer。CAShapeLayer是在坐标系内绘制贝塞尔曲线的，通过绘制贝塞尔曲线，设置shape(形状)的path(路径)，从而绘制各种各样的图形以及不规则图形。因此，使用CAShapeLayer需要与UIBezierPath一起使用.</p>
+<p>常用API:<br><img src="https://upload-images.jianshu.io/upload_images/2420845-cbf275c53124fb71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="WX20180628-231125.png"></p>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">self</span>.shapLinelayer.path = path.CGPath;</span><br><span class="line"><span class="keyword">self</span>.shapLinelayer.lineWidth = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">self</span>.shapLinelayer.strokeColor = [<span class="built_in">UIColor</span> redColor].CGColor;</span><br><span class="line"><span class="keyword">self</span>.shapLinelayer.fillColor = [<span class="built_in">UIColor</span> orangeColor].CGColor;</span><br><span class="line"><span class="keyword">self</span>.shapLinelayer.shadowOpacity = <span class="number">0.8</span>;</span><br><span class="line"><span class="keyword">self</span>.shapLinelayer.shadowColor = [<span class="built_in">UIColor</span> blackColor].CGColor;</span><br><span class="line"><span class="keyword">self</span>.shapLinelayer.shadowRadius = <span class="number">4</span>;</span><br><span class="line"><span class="keyword">self</span>.shapLinelayer.shadowOffset = <span class="built_in">CGSizeMake</span>(<span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line"><span class="keyword">self</span>.shapLinelayer.shadowPath = path.CGPath;<span class="comment">//配置阴影路径</span></span><br><span class="line"><span class="keyword">self</span>.shapLinelayer.lineJoin = kCALineJoinRound;</span><br><span class="line">[<span class="keyword">self</span>.layer insertSublayer:<span class="keyword">self</span>.shapLinelayer atIndex:<span class="number">0</span>];</span><br></pre></td></tr></table></figure>
 <p>最后在layoutsubview方法里面调用这些方法就OK了.iOS中画图类还有CoreGraphics，但笔者比较喜欢使用CAShapeLayer，且CAShapeLayer一般是与UIBezierPath连用的，如果有动画功能的话，还可以加上CABasicAnimation.</p>
+<p>扩展:</p>
+<p>1,贝赛尔曲线除了画圆,还有很多别的函数,<br><a href="https://developer.apple.com/documentation/uikit/uibezierpath?preferredLanguage=occ" target="_blank" rel="noopener">https://developer.apple.com/documentation/uikit/uibezierpath?preferredLanguage=occ</a></p>
+<p>2,CAShapeLayer还可以与CADisplayLink,黄金搭档,实现很多复杂的动画.<br><a href="http://www.cocoachina.com/ios/20161202/18252.html" target="_blank" rel="noopener">http://www.cocoachina.com/ios/20161202/18252.html</a></p>
 
         
         </div>
@@ -280,7 +285,7 @@
 
 </div>
 
-    <a data-url="http://www.lianzai.me/2018/06/21/不规则图形绘制以及阴影/" data-id="cjipne16u0004gy9ko0bsbize" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="http://www.lianzai.me/2018/06/21/不规则图形绘制以及阴影/" data-id="cjipne16u0004gy9ko0bsbize" class="article-share-link"><i class="fas fa-share"></i>Partager</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -357,7 +362,7 @@
     
     
         <a href="/2017/11/21/git提速/" id="article-nav-older" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Older</strong>
+            <strong class="article-nav-caption">Plus ancien</strong>
             <div class="article-nav-title">git提速</div>
         </a>
     
@@ -378,7 +383,7 @@
    
         
     <div class="widget-wrap">
-        <h3 class="widget-title">recent</h3>
+        <h3 class="widget-title">Récents</h3>
         <div class="widget">
             <ul id="recent-post" class="">
                 
@@ -467,7 +472,7 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">archives</h3>
+        <h3 class="widget-title">Archives</h3>
         <div class="widget">
             <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li></ul>
         </div>
@@ -476,7 +481,7 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">tags</h3>
+        <h3 class="widget-title">Tags</h3>
         <div class="widget">
             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unity/">unity</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日常/">日常</a><span class="tag-list-count">1</span></li></ul>
         </div>
@@ -485,7 +490,7 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">tag cloud</h3>
+        <h3 class="widget-title">Nuage de tags</h3>
         <div class="widget tagcloud">
             <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/unity/" style="font-size: 10px;">unity</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/日常/" style="font-size: 10px;">日常</a>
         </div>
@@ -494,7 +499,7 @@
     
         
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">links</h3>
+        <h3 class="widget-title">Liens</h3>
         <div class="widget">
             <ul>
                 
