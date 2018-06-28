@@ -16,7 +16,7 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2420845-f03049ced83d5ce8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2420845-2482abc294c34b48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2420845-cbf275c53124fb71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-06-28T15:25:00.291Z">
+<meta property="og:updated_time" content="2018-06-28T15:43:40.144Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="贝塞尔曲线+CAShapeLayer的相关应用">
 <meta name="twitter:description" content="之前碰到过一个优惠劵的不规则图形,既有圆角又有阴影,虽然用QUARZ2D也能做,但是还是想用下贝塞尔+CAShapeLayer的组合.最终效果如下图:">
@@ -272,6 +272,7 @@
 <p>常用API:<br><img src="https://upload-images.jianshu.io/upload_images/2420845-cbf275c53124fb71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="WX20180628-231125.png"></p>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">self</span>.shapLinelayer.path = path.CGPath;</span><br><span class="line"><span class="keyword">self</span>.shapLinelayer.lineWidth = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">self</span>.shapLinelayer.strokeColor = [<span class="built_in">UIColor</span> redColor].CGColor;</span><br><span class="line"><span class="keyword">self</span>.shapLinelayer.fillColor = [<span class="built_in">UIColor</span> orangeColor].CGColor;</span><br><span class="line"><span class="keyword">self</span>.shapLinelayer.shadowOpacity = <span class="number">0.8</span>;</span><br><span class="line"><span class="keyword">self</span>.shapLinelayer.shadowColor = [<span class="built_in">UIColor</span> blackColor].CGColor;</span><br><span class="line"><span class="keyword">self</span>.shapLinelayer.shadowRadius = <span class="number">4</span>;</span><br><span class="line"><span class="keyword">self</span>.shapLinelayer.shadowOffset = <span class="built_in">CGSizeMake</span>(<span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line"><span class="keyword">self</span>.shapLinelayer.shadowPath = path.CGPath;<span class="comment">//配置阴影路径</span></span><br><span class="line"><span class="keyword">self</span>.shapLinelayer.lineJoin = kCALineJoinRound;</span><br><span class="line">[<span class="keyword">self</span>.layer insertSublayer:<span class="keyword">self</span>.shapLinelayer atIndex:<span class="number">0</span>];</span><br></pre></td></tr></table></figure>
 <p>最后在layoutsubview方法里面调用这些方法就OK了.iOS中画图类还有CoreGraphics，但笔者比较喜欢使用CAShapeLayer，且CAShapeLayer一般是与UIBezierPath连用的，如果有动画功能的话，还可以加上CABasicAnimation.</p>
+<p>DEMO地址<br><a href="https://github.com/comsubins/TwoDemo" target="_blank" rel="noopener">https://github.com/comsubins/TwoDemo</a></p>
 <p>扩展:</p>
 <p>1,贝赛尔曲线除了画圆,还有很多别的函数,<br><a href="https://developer.apple.com/documentation/uikit/uibezierpath?preferredLanguage=occ" target="_blank" rel="noopener">https://developer.apple.com/documentation/uikit/uibezierpath?preferredLanguage=occ</a></p>
 <p>2,CAShapeLayer还可以与CADisplayLink,黄金搭档,实现很多复杂的动画.<br><a href="http://www.cocoachina.com/ios/20161202/18252.html" target="_blank" rel="noopener">http://www.cocoachina.com/ios/20161202/18252.html</a></p>
@@ -285,7 +286,7 @@
 
 </div>
 
-    <a data-url="http://www.lianzai.me/2018/06/21/UIBezierPath+CAShapeLayer/" data-id="cjiypekju0002k8tl13kzug03" class="article-share-link"><i class="fas fa-share"></i>Partager</a>
+    <a data-url="http://www.lianzai.me/2018/06/21/UIBezierPath+CAShapeLayer/" data-id="cjiypyeo600005rtlltg6pzxr" class="article-share-link"><i class="fas fa-share"></i>Partager</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
